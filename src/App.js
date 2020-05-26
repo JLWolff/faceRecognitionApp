@@ -97,7 +97,7 @@ class App extends React.Component {
 //after passing by the calculateFaceLocation with the response of the API
   onButtonSubmit = () =>{
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch(' https://git.heroku.com/serene-shore-29568.git:3000/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -108,7 +108,7 @@ class App extends React.Component {
       //here we are taking the response and selectin the boxes that we will ned
       .then(response => {
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://git.heroku.com/serene-shore-29568.git:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
